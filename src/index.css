@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&&family=Work+Sans:ital,wght@0,400;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&&family=Work+Sans:ital,wght@0,400;1,200&family=Quicksand&display=swap');
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -759,6 +759,127 @@ color:#23A4F2;
   padding-left: 20px;
 }
 
+
+
+
+
+/*Calendar*/
+html{
+  font-size: 62.5%;
+}
+.container{
+  width:100%;
+  height:100vh;
+  background-color: #666666;
+  color:var(--darkgrey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.calendar{
+  width: 45rem;
+  height: 52rem;
+  background-color: #ffff;
+  box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+}
+
+.month{
+  width:100%;
+  height:12rem;
+  background-color: var(--orange);
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:0.2rem;
+  text-align: center;
+  text-shadow:0 0.3rem 0.5rem rgba(0,0,0.5) ;
+}
+
+.i-prev{
+  font-size: 2rem;
+  cursor:pointer;
+  color:#fff;
+}
+.i-next{
+  font-size: 2rem;
+  cursor:pointer;
+  color:#fff;
+}
+
+.month h1{
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing:0.2rem;
+  margin-bottom: 1 rem ;
+}
+
+.month p{
+  font-size: 1.6rem;
+}
+.date h1{
+  color:#ffff;
+
+}
+.date p{
+  color:#fff;
+}
+
+.weekdays{
+  width:100%;
+  height:5rem;
+  padding: 0 0,4rem;
+  display:flex;
+  align-items: center;
+}
+
+.weekdays div{
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  width:calc(44.2rem/7);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0.3rem 0.5rem rgba(0,0,0,0.1) ;
+}
+
+.days{
+  width:100%;
+  display:flex;
+  flex-wrap: wrap;
+  padding: 0.2rem;
+}
+
+.days div{
+  font-size: 1.4rem;
+  margin:0.3rem;
+  width: calc(40.4rem/7);
+  height:5rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow:0.5rem .5rem rgba(0,0,0,0.1);
+  transition:background-color 0.2s;
+}
+
+.days div:hover:not(.today){
+  background-color:var(--orange) ;
+  border:0.2rem solid #E57B1E;
+  cursor: pointer;
+  color:#ffff;
+}
+.prev-date,.next-date{
+  opacity:0.5;
+}
+
+.today{
+  background-color: #E57B1E;
+  color:#ffff;
+
+}
 @media screen and (min-width: 768px){
   .logo_section{
     display: flex;
@@ -779,13 +900,10 @@ color:#23A4F2;
 /*how to excecute this*/
 .search{
   position:absolute;
- 
   margin-left: 600px;
   margin-top: 30px;
   display: flex;
   justify-content: end;
-  
-
 }
 .search input{
   background-color: var(--lightgrey);
@@ -795,7 +913,6 @@ color:#23A4F2;
   padding-bottom: 7px;
   padding-top: 7px;
   padding-left: 10px;
- 
 }
 .search_icon{
   position: absolute;
@@ -948,23 +1065,17 @@ font-size: 20px;
    height:35px;
    font-size: 14px;
 }
-
-
 /*photos*/
 .details{
   gap:30px;
   font-size: 13px;
   font-weight: 600;
   padding-left: 30px;
-
 }
-
-
 /* images */
 .images{
   padding-left: 30px;
   display:grid;
-  
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 220px);
 }

@@ -34,7 +34,7 @@ function Sectiontwo() {
                     </div>
                 </div>
 
-                <div class="second-row">
+                <div className="second-row">
                     <div className="top_row">
                     <p><MdLocalLaundryService className="roomservice" />Laundry</p>
                     <p><FaWifi className="roomservice" />Free Wifi</p>

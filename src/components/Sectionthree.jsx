@@ -1,12 +1,21 @@
+import React from 'react';
 import hotel3 from '../assets/images/hotel3.jpeg';
-import { BsCircle } from 'react-icons/bs'
+import { BsCircle } from 'react-icons/bs';
+import {Navigate} from 'react-router-dom';
+// import Calendar from './Calendar';
 
 function Sectionthree() {
+    // const [gotocalendar, setCalendar] = React.useState(false);
+    
+    // if (gotocalendar){
+    //     return <Navigate to="/calendar"/>;
+    // }
+
     return (
         <section>
+           
             <div className="sectionthree">
                 <h1>Available Packages</h1>
-
                 <div className="checking">
                     <div className="first_content">
                         <div className="content">
@@ -79,7 +88,19 @@ function Sectionthree() {
                                 <p>per night</p>
                                 <h2>Total: $294</h2>
                             </div>
-                            <button className="booknow">Book Now</button>
+
+                            <button onClick={() =>{
+                                setCalendar(true);
+                            }} 
+                            className="booknow">Book Now</button>
+                            
+                            
+                            {/* <button className="booknow"
+                            onClick={
+                                ()=>{
+                                    return <Calendar/>
+                                }
+                            }>Book Now</button> */}
                         </div>
 
                     </div>
